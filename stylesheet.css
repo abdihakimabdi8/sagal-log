@@ -1,0 +1,131 @@
+body {
+  
+  padding-top: 0px;
+  text-align: center;
+  background-size: cover;
+  position: absolute;
+
+  font-family: proxima-nova,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 13px;
+  line-height: 1.42857143;
+  background: url(https://cdn.lynda.com/static/signup/images/bg-signup.jpg) center center no-repeat fixed;
+  
+}
+#name{
+  box-sizing: border-box;
+  background-color:black;
+  line-height:36.5714px;
+  font-family:proxima-nova,"Helvetica Neue",Helvetica,sans-serif
+  font-size: 13em;
+  margin-left:10px;
+  margin:right:10px;
+  padding-bottom:10;
+}
+ 
+
+ #name li { 
+  left:50%;
+  display: inline;
+  border: 2px solid #000000;
+  color: #ffffff;
+	padding: 5px;
+	background-color: #333;
+  
+}
+#name li:first-child{
+    margin-left:-40px;
+  
+}
+#name li:nth-child(2){
+   margin-left:980px;
+  
+}
+
+
+#chooser{
+box-sizing:border-box;
+color:white;
+
+
+
+padding-bottom:50px;
+
+background-color: #acd1b2;
+margin-left: 10px;
+margin-right:10px;
+border-radius:5px;
+
+}
+ #forms{
+  box-sizing: border-box;
+  background-color:white;
+  line-height:36.5714px;
+  font-family:proxima-nova,"Helvetica Neue",Helvetica,sans-serif
+  font-size: 13em;
+  padding-top:10px;
+  padding-bottom:8;
+  margin-left: 10px;
+  margin-right:10px;
+  
+
+}
+.operation {
+ 
+
+  left:50%;
+	margin-left:294px;
+  background-color:white;
+  }
+.operation li:first-child {
+  display: inline;
+	border: 1px solid white;
+	font-family: proxima-nova,"Helvetica Neue",Helvetica,sans-serif;
+	color: #ffffff;
+	padding: 5px;
+	border-radius: 5px 5px;
+	background-color: blue;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  padding-bottom:30px;
+  padding-top:20px;
+}
+
+
+.operation li:nth-child(2){
+ 
+  background-color:#78baea;
+  display: inline;
+  border: 1px solid white;
+	font-family: proxima-nova,"Helvetica Neue",Helvetica,sans-serif;
+	color: #ffffff;
+	padding: 5px;
+	border-radius: 5px 5px;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  padding-top:20px;
+  padding-bottom:30px;
+  padding-right:20px;
+
+
+}
+#forms1 {
+  
+  padding-top:10px;
+  margin-left: 1px;
+  background-color:white;
+  margin-left:10px;
+  margin-right:10px;
+  }
+
+.amount li{
+  line-height:10.5714px;
+  display:inline-block;
+ 
+}
+
+#net {
+ background-color: #acd1b2;
+ padding-bottom:10;
+ margin-left:10;
+ margin-right:10;
+}
