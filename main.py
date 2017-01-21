@@ -15,35 +15,31 @@
 # limitations under the License.
 #
 import webapp2
-def netPayForm (net_pay):
-
-    net_payForm =   "<form method='post'><label>Net Pay  <textarea name='lineHaul' >" + net_pay + "</textarea></form>"
-    return net_payForm
-def forms(fuel_advan_amount):
-    fuel_advance = "<form method='post'><label>Message  </label><textarea name='message' cols='' rows=''>" + textarea_content + "</textarea></form>"
-    return fuel_advance
+home_page = open('homepage.html').read()
 def code(lineHaul, fuelAdvance):
     brokerCommission = lineHaul*(float(.10))
     netOfCommision = lineHaul -int(brokerCommission)
     netHaul = netOfCommision - fuelAdvance
     return netHaul
-
+def netPayForm(netpay):
+    netPay = "<div id='net'> Net Pay<form method='post'><textarea>"+ netpay +"</textarea></form></div>"
+    return netPay
 class MainHandler(webapp2.RequestHandler):
 
     def get(self):
 
-        header =  "<!DOCTYPE html><html><head></head><title>Sagal Logistics LLC Signup</title><style><link type='text/css' rel='stylesheet' href='stylesheet.css'></style><body><h2><div id='name'><ul><li>Sagal Logistics LLC</li><li>Sign In</li></ul></div></h2>"
-        contentOne= "<div id='chooser'><strong>Process Load Payment</strong></div>"
-        contentTwo =  "<form method='post'><div id='forms'><ul class='operation' style='list-style-type:none'><li>Owner-Operator</li><li>Driver</li></ul></div><div id='forms1'><ul class='amount' style='list-style-type:none'><li>Date<form method='post'><br><input type='number'></form></li><br><li>Load Number<form method='post'><input type='number'></form></li><br><li>Description<form method='post'><input type='number'></form></li><br><li>Line Haul<form method='post'><input type='number' name='lineHaul'></form></li><br><li>Fuel Advance<form method='post'><input type='number' name='fuelAdvance'></form></li><br><form><input type='Submit'></form></li><br></ul><div id='net'>Net Pay<form method='post'><input type='number'></form></div></form></body></html>"
-        self.response.write( header + contentOne + contentTwo)
+        content =  "<div id='forms1'><form method='post'><label>Load Number</label><br><input type='number'><br><label>Description</label><br><input type'number'><br><label>Line Haul Pay</label><br><input type='number' name='lineHaul' ><br><label>Fuel Advance </label><br><input type='number' name='fuelAdvance'><p><div class='continueform'><button><input type='submit' name='continue'></button></div></p></form></div>"
+        header = home_page
+        continuebutton = "<div id='continueform'><button type='Submit' name='continue'>Continue</button></div>"
+        self.response.write( header + content)
     def post(self):
         lineHaul = int(self.request.get("lineHaul"))
         fuelAdvance = int(self.request.get("fuelAdvance"))
         net_pay = code(lineHaul, fuelAdvance)
-        content = netPayForm(str(net_pay))
-        header = " <h2><div id='name'><ul><li>Sagal Logistics LLC</li><li>Sign In</li></ul></div></h2>"
-        contentOne= "<div id='chooser'><strong>Process Load Payment</strong></div>"
-        self.response.write(header + contentOne + content)
+        contentTwo = netPayForm(str(net_pay))
+        contentOne = "<div id='forms1'><form method='post'><label>Load Number</label><br><input type='number'><br><label>Description</label><br><input type'number'><br><br><label>Line Haul Pay</label><br><input type='number' name='lineHaul' ><br><label>Fuel Advance </label><br><input type='number' name='fuelAdvance'></form></div>"
+        continueForm = "<div id='continueform'>Continue</div>"
+        self.response.write(home_page + contentOne + contentTwo + continueForm)
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)

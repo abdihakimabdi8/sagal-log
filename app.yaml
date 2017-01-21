@@ -10,8 +10,8 @@ handlers:
   upload: favicon\.ico
 
 
-- url: /stylesheet
-  static_dir: stylesheet
+- url: /stylesheet\.css
+  static_files: stylesheet.css
   upload: stylesheet.css
   
 - url: .*
