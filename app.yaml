@@ -12,7 +12,7 @@ handlers:
 
 - url: /stylesheet\.css
   static_files: stylesheet.css
-  upload: stylesheet.css
+  upload: stylesheet\.css
   
 - url: .*
   script: main.app

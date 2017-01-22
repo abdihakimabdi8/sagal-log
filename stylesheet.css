@@ -1,0 +1,153 @@
+body {
+  text-align: center;
+  background-size: cover;
+  position: absolute;
+  font-family: proxima-nova,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 13px;
+  line-height: 1.42857143;
+  background: url(https://cdn.lynda.com/static/signup/images/bg-signup.jpg) center center no-repeat fixed;
+
+}
+#name{
+  background-color:black;
+  line-height:18.5714px;
+  font-family:proxima-nova,"Helvetica Neue",Helvetica,sans-serif
+  font-size: 13px;
+  padding-bottom: 10px;
+  text-align: right;
+
+}
+
+
+ #name li {
+  display: inline;
+  border: 2px solid #000000;
+  color: #ffffff;
+  background-color: #333;
+
+}
+#name li:first-child{
+    margin-left:-110px;
+
+}
+#name li:nth-child(2){
+   margin-left:1200px;
+   margin-right: 10px;
+
+}
+
+
+#process{
+color:white;
+padding-top: 20px;
+padding-bottom:30px;
+
+
+}
+ #forms{
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+ background-color:white;
+ line-height:36.5714px;
+ font-family:proxima-nova,"Helvetica Neue",Helvetica,sans-serif
+ font-size: 13em;
+ padding-top:10px;
+  padding-bottom:8;
+  margin-left: 200px;
+  margin-right:100px;
+}
+.operation {
+  left:50%;
+  margin-left:454px;
+  background-color:white;
+  }
+.operation li:first-child {
+display: inline;
+border: 1px solid white;
+font-family: proxima-nova,"Helvetica Neue",Helvetica,sans-serif;
+color: #ffffff;
+padding: 5px;
+border-radius: 5px 5px;
+background-color: blue;
+font-size: 1.5em;
+box-sizing: border-box;
+padding-bottom:30px;
+padding-top:20px;
+}
+
+.operation li:nth-child(2){
+
+background-color:#78baea;
+display: inline;
+border: 1px solid white;
+font-family: proxima-nova,"Helvetica Neue",Helvetica,sans-serif;
+color: #ffffff;
+padding: 5px;
+border-radius: 5px 5px;
+font-size: 1.5em;
+box-sizing: border-box;
+padding-top:20px;
+padding-bottom:30px;
+padding-right:20px;
+}
+#forms1 {
+
+padding-top:10px;
+background-color:white;
+margin-left:200px;
+margin-right:100px;
+border-bottom-right-radius:  10px;
+border-bottom-left-radius: 10px;
+padding-bottom: 40px;
+}
+
+.amount li{
+line-height:40.5714px;
+display:inline-block;
+}
+
+#net {
+border-radius: 10px;
+background-color: #acd1b2;
+margin-left:200px;
+margin-right:100px;
+padding-top: 15px;
+}
+
+#continueform {
+background-color: #acd1b2;
+margin-left:120px;
+display: inline;
+border: 1px solid white;
+font-family: proxima-nova,"Helvetica Neue",Helvetica,sans-serif;
+color: black;
+padding-left: 90px;
+padding-right: 90px;
+border-radius: 5px 5px;
+background-color: #ff9800;
+font-size: 1.5em;
+padding-bottom:10px;
+padding-top:13px;
+border-color:#ab772a;
+}
+.continueform {
+background-color: #acd1b2;
+margin-left:10;
+margin-right:10;
+left:50%;
+margin-left:294px;
+display: inline;
+border: 1px solid white;
+font-family: proxima-nova,"Helvetica Neue",Helvetica,sans-serif;
+color: black;
+padding-left: 90px;
+padding-right: 90px;
+border-radius: 5px 5px;
+background-color: #ff9800;
+font-size: 1.5em;
+padding-bottom:10px;
+padding-top:13px;
+border-color:#ab772a;
+margin: 20px;
+display: inline;
+}
