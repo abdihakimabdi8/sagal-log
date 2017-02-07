@@ -1,0 +1,27 @@
+{% extends "homepage.html" %}
+{% block content %}
+<div id='forms1'>
+    <form action='/load' method='post'>
+        <label>Load Number</label><br>
+        <input type='number'><br>
+        <label>Description</label><br>
+        <input type'number'><br>
+        <label>Line Haul Pay</label><br>
+        <input type='number' name='lineHaul' ><br>
+        <label>Fuel Advance </label><br>
+        <input type='number' name='fuelAdvance'>
+        <p>
+            <div class='continueform'><button>
+            <input type='submit' name='continue'></button>
+            </div>
+       </p>
+   </form>
+</div>
+<div id='net'>
+    Net Pay
+    <form action='/load' method='post'>
+        <textarea>{{ net_pay}}</textarea>
+        </form>
+</div>
+
+{% endblock %}
