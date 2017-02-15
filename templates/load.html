@@ -1,0 +1,17 @@
+<div class="load">
+  <div class="load-heading">
+      <div class="info">
+      <div class='date'>{{l.created.strftime("%b %d, %Y")}}</div>
+      <div class='owner'>{{l.owner_operator}}</div>
+      <div class='number'>{{l.loadNumber}}</div>
+
+     <div class='description'> {{l.description}}</div>
+
+      <div class='pay'>{{l.lineHaul}}</div>
+
+     <div class='fuel'> {{l.fuelAdvance}}</div>
+      <div class='netpay'>{{l._render_text | safe}}</div>
+  </div>
+
+
+</div>

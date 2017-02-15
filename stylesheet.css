@@ -35,14 +35,30 @@ body {
    margin-right: 10px;
 
 }
-
-
 #process{
 color:white;
 padding-top: 20px;
 padding-bottom:30px;
+}
+#button{
+	border: 2px solid #000000;
+	float:left;
+	position: relative;
+	left: 229px;
+	bottom: -20px;
+	border-radius: 5px;
+	background-color: #cc0323;
+	height: 30px;
+	width: 150px;
 
+}
 
+#button p{
+	position: relative;
+	bottom: 10px;
+	font-size: 0.8em;
+	color: #acd1b2;
+	text-align: center;
 }
  #forms{
  border-top-left-radius: 10px;
@@ -106,7 +122,22 @@ margin-right:100px;
 
 padding-bottom: 40px;
 }
+#continue1 {
 
+padding-top:10px;
+
+background-color:white;
+
+margin-left:200px;
+
+margin-right:100px;
+
+/* border-bottom-right-radius:  10px; */
+
+/* border-bottom-left-radius: 10px; */
+
+padding-bottom: 90px;
+}
 .amount li{
 line-height:40.5714px;
 display:inline-block;
@@ -157,4 +188,124 @@ padding-top:13px;
 border-color:#ab772a;
 margin: 20px;
 display: inline;
+}
+.continue {
+background-color: #acd1b2;
+margin-left:60px;
+display: inline;
+border: 1px solid white;
+font-family: proxima-nova,"Helvetica Neue",Helvetica,sans-serif;
+color: black;
+padding-left: 90px;
+padding-right: 90px;
+border-radius: 5px 5px;
+background-color: #ff9800;
+font-size: 1.5em;
+padding-bottom:10px;
+padding-top:13px;
+border-color:#ab772a;
+margin-top: 10px;
+}
+.continueform {
+background-color: #acd1b2;
+margin-left:10;
+margin-right:10;
+left:50%;
+margin-left:294px;
+display: inline;
+border: 1px solid white;
+font-family: proxima-nova,"Helvetica Neue",Helvetica,sans-serif;
+color: black;
+padding-left: 90px;
+padding-right: 90px;
+border-radius: 5px 5px;
+background-color: #ff9800;
+font-size: 1.5em;
+padding-bottom:10px;
+padding-top:13px;
+border-color:#ab772a;
+margin: 20px;
+display: inline;
+}
+.info{
+    display: inline;
+    font-size: 14;
+    font-style: normal;
+    /*background-color: #daddad;*/
+}
+.date{
+    margin-left: -150px;
+    display: inline;
+    margin-right:  65px;
+    text-align: center;
+    font-size: 12px;
+    padding-right: auto;
+
+}
+.owner{
+    display: inline;
+    margin-right: 30px;
+    text-align: left;
+
+}
+.number{
+    display: inline;
+    margin-right: 30px;
+    text-align: left;
+
+}
+.description{
+    display: inline;
+}
+.pay{
+    margin-right: 30px;
+    display: inline;
+    margin-left:   55px;
+}
+.fuel{
+    display: inline;
+    padding-left: 55px;
+    margin-right: 45px;
+}
+.netpay{
+    display: inline;
+    margin-right: 20px;
+}
+.infotitle{
+    font-size: 16px;
+    font-weight: bold;
+}
+.datetitle{
+    display: inline;
+    margin-right:  75px;
+    text-align: left;
+    margin-left: -95px
+}
+.ownertitle{
+    display: inline;
+    padding-right: 35px;
+
+}
+.numbertitle{
+    display: inline;
+    padding-right: 35px;
+}
+.descriptiontitle{
+    margin-right: 10px;
+    display: inline;
+    padding-right: 35px;
+    margin-right: 50px;
+    text-align:right;
+}
+.paytitle{
+    display: inline;
+    padding-right: 35px;
+}
+.fueltitle{
+    display: inline;
+    padding-right: 35px;
+}
+.netpaytitle{
+    display: inline;
+    padding-right: 35px;
 }

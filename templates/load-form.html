@@ -2,10 +2,12 @@
 {% block content %}
 <div id='forms1'>
     <form action='/load' method='post'>
+        <label>Owne/Operator</label><br>
+        <input type='text' name='owner'><br>
         <label>Load Number</label><br>
-        <input type='number'><br>
+        <input type='number' name='loadnumber'><br>
         <label>Description</label><br>
-        <input type'number'><br>
+        <input type'text' name='description'><br>
         <label>Line Haul Pay</label><br>
         <input type='number' name='lineHaul' ><br>
         <label>Fuel Advance </label><br>
@@ -17,11 +19,7 @@
        </p>
    </form>
 </div>
-<div id='net'>
-    Net Pay
-    <form action='/load' method='post'>
-        <textarea>{{ net_pay}}</textarea>
-        </form>
+
 </div>
 
 {% endblock %}

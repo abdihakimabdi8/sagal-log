@@ -1,0 +1,22 @@
+{% extends "homepage.html" %}
+
+{% block content %}
+<div class="load">
+  <div class="load-heading">
+      <div class="info">
+      <div class='date'>Date</div>
+      <div class='owner'>Owner/Operator</div>
+      <div class='number'>Load Number</div>
+
+     <div class='description'> Description</div>
+
+      <div class='pay'>Line Haul Pay</div>
+
+     <div class='fuel'> Fuel Advance</div>
+      <div class='netpay'>Net Pay</div>
+  </div>
+
+
+</div>
+  {{load.render() | safe}}
+{% endblock %}

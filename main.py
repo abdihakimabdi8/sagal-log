@@ -78,19 +78,61 @@ class Welcome(Handler):
             self.render('welcome.html', username = username)
         else:
             self.redirect('/signup')
-class MainHandler(Handler):
+class NewLoad(Handler):
     def get(self):
             self.render( 'load-form.html')
     def post(self):
+        owner_operator = self.request.get('owner')
+        loadNumber = self.request.get('loadnumber')
+        description = self.request.get('description')
         lineHaul = int(self.request.get("lineHaul"))
         fuelAdvance = int(self.request.get("fuelAdvance"))
         net_pay = code(lineHaul, fuelAdvance)
         contentTwo = netPayForm(str(net_pay))
-        self.render( 'load-form.html', net_pay=net_pay)
+        #self.render( 'load-form.html', net_pay=net_pay)
+        if owner_operator and loadNumber and description and lineHaul and fuelAdvance and net_pay:
+            l = Load(parent = blog_key(), owner_operator = owner_operator, loadNumber = loadNumber, description = description, lineHaul=lineHaul, fuelAdvance=fuelAdvance, net_pay=net_pay)
+            l.put()
+            self.redirect('/netpay/%s' % str(l.key().id()))
+        else:
+            error = "submit valid Load info, please!"
+            self.render("load-form.html", owner_operator = owner_operator, loadNumber = loadNumber, description = description, lineHaul=lineHaul, fuelAdvance=fuelAdvance, error=error)
+def blog_key(name = 'default'):
+    return db.Key.from_path('load', name)
+
+class Load(db.Model):
+    owner_operator = db.StringProperty(required = True)
+    loadNumber = db.StringProperty(required = True)
+    description = db.StringProperty(required = True)
+    lineHaul= db.IntegerProperty(required=True)
+    fuelAdvance = db.IntegerProperty(required=True)
+    net_pay = db.IntegerProperty(required=True)
+    created = db.DateTimeProperty(auto_now_add = True)
+    last_modified = db.DateTimeProperty(auto_now = True)
+
+    def render(self):
+        self._render_text = self.net_pay
+        return render_str("load.html", l = self)
+class NetPay(Handler):
+    def get(self):
+        loads = db.GqlQuery("select * from Load order by created desc limit 3")
+        self.render('load-table.html', loads = loads)
+class LoadPage(Handler):
+    def get(self, load_id):
+        key = db.Key.from_path('Load', int(load_id), parent=blog_key())
+        load = db.get(key)
+
+        if not load:
+            self.error(404)
+            return
+
+        self.render("permalink.html", load = load)
+
 app = webapp2.WSGIApplication([
     ('/', Index),
     ('/signup', SignUp),
     ('/welcome', Welcome),
-    ('/load', MainHandler),
-
+    ('/load', NewLoad),
+    ('/netpay/?', NetPay),
+    ('/netpay/([0-9]+)', LoadPage),
 ], debug=True)

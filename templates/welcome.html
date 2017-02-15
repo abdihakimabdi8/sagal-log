@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <title>Unit 2 Signup</title>
-  </head>
-
-  <body>
+{% extends "homepage.html" %}
+{% block space %}
     <h2>Welcome, {{username}}!</h2>
-  </body>
-</html>
+    <div id=continue1>
+    </div>
+{% endblock %}
+
+{% block content %}
+        <div class='continue'>
+    <button>
+                 <strong><a href="http://localhost:8080/load">Process Load Payment</a></strong>
+    </button>
+    </div>
+
+{% endblock %}

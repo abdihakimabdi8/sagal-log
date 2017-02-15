@@ -1,0 +1,23 @@
+{% extends "homepage.html" %}
+
+{% block content %}
+<div class="load">
+  <div class="load-heading">
+      <div class="infotitle">
+      <p class='datetitle'>Date</p>
+      <p class='ownertitle'>Owner/Op</p>
+      <p class='numbertitle'>Load No.</p>
+
+     <p class='descriptiontitle'> Description</p>
+
+      <p class='paytitle'>Line Haul</p>
+
+     <p class='fueltitle'> Fuel Advance</p>
+      <p class='netpaytitle'>Net Pay</p>
+  </div>
+</div>
+
+  {% for l in loads %}
+ {{ l.render() | safe }}
+  {% endfor %}
+{% endblock %}
